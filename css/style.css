@@ -1,0 +1,528 @@
+/* =========================================================
+   1. GLOBAL STYLES & IMPORTS
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+/* Tombol Umum */
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.primary-btn {
+    background-color: #333;
+    color: #ffffff;
+}
+
+/* =========================================================
+   2. SIDEBAR (Global Layout)
+   ========================================================= */
+.app-layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 60px;
+    background-color: #333;
+    padding: 20px 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    font-size: 1.2rem;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    opacity: 1;
+    background-color: #444;
+}
+
+.sidebar > div {
+    flex-grow: 1;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 60px;
+    padding: 40px;
+    width: calc(100% - 60px);
+}
+
+.page-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+/* =========================================================
+   3. LOGIN STYLES (index.html)
+   ========================================================= */
+:root {
+    --primary-color: #4f46e5;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --bg-light: #f9fafb;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.login-body {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    background: #fff;
+    display: flex;
+    width: 900px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* Panel Kiri */
+.left-panel {
+    flex: 1;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.illustration-content img {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+/* Panel Kanan */
+.right-panel {
+    flex: 1.2;
+    padding: 60px;
+    background: white;
+}
+
+header h1 {
+    font-size: 28px;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+header p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px 12px 12px 45px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.input-field input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Tombol Login */
+.login-btn {
+    width: 100%;
+    background: var(--primary-color);
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #4338ca;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    flex: 1;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+/* =========================================================
+   4. DASHBOARD STYLES (dashboard.html)
+   ========================================================= */
+/* Sidebar Styling */
+.sidebar {
+    width: 260px;
+    background: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    border-right: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.sidebar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+}
+
+.sidebar-brand i { color: #00dbde; }
+
+.sidebar-nav { display: flex; flex-direction: column; gap: 8px; }
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #777;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sidebar-nav a.active, .sidebar-nav a:hover {
+    background: linear-gradient(to right, #00dbde22, #fc00ff11);
+    color: #00dbde;
+}
+
+.sidebar-nav a i { font-size: 1.1rem; }
+
+/* Main Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header-title h2 { font-weight: 700; color: #333; }
+.header-title p { color: #999; font-size: 0.9rem; }
+
+.header-profile img {
+    width: 45px;
+    border-radius: 50%;
+    border: 2px solid #00dbde;
+    padding: 2px;
+}
+
+/* Stat Cards Section */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.stat-card:hover { transform: translateY(-5px); }
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+/* Gradients Matching Login */
+.purple-gradient { background: linear-gradient(135deg, #f000ff, #7a00ff); }
+.blue-gradient { background: linear-gradient(135deg, #00dbde, #0066ff); }
+.cyan-gradient { background: linear-gradient(135deg, #00dbde, #00ff88); }
+
+.stat-label { font-size: 0.85rem; color: #999; font-weight: 500; }
+.stat-details h3 { font-size: 1.5rem; font-weight: 700; color: #333; }
+
+/* Chart Area */
+.chart-container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.placeholder-content {
+    height: 250px;
+    background: #fcfcfc;
+    border: 2px dashed #eee;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+}
+
+.placeholder-content i { font-size: 3rem; margin-bottom: 10px; }
+
+/* Global Layout Adjustment */
+.app-layout { display: flex; background: #f8f9fa; min-height: 100vh; }
+.main-content { flex: 1; padding: 40px; }
+
+
+/* =========================================================
+   5. PRODUCT TABLE STYLES (products.html)
+   ========================================================= */
+/* Container Tabel */
+.table-container {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.table-controls {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 10px 10px 45px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #fcfcfc;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #00dbde;
+    box-shadow: 0 0 0 3px rgba(0, 219, 222, 0.1);
+}
+
+/* Styling Tabel Modern */
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modern-table th {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.modern-table td {
+    padding: 18px 15px;
+    border-bottom: 1px solid #f8f9fa;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.modern-table tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* Badge Stok */
+.stock-badge {
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.stock-low { background: #fff1f0; color: #ff4d4f; }
+.stock-normal { background: #f6ffed; color: #52c41a; }
+
+/* Tombol Aksi */
+.action-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-edit { background: #e6f7ff; color: #1890ff; }
+.btn-delete { background: #fff1f0; color: #ff4d4f; }
+
+.btn-edit:hover { background: #1890ff; color: #fff; }
+.btn-delete:hover { background: #ff4d4f; color: #fff; }
+
+/* Header Action */
+.btn-add-product {
+    background: linear-gradient(to right, #00dbde, #fc00ff);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 219, 222, 0.3);
+}
+/* =========================================================
+   6. MEDIA QUERIES (Responsif)
+   ========================================================= */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .login-container {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .right-panel {
+        padding: 30px 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+}

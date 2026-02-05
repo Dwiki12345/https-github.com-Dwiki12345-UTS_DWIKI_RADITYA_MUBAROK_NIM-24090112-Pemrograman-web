@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Modern Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fas fa-bolt"></i> <span>NEXUS</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="active" title="Dashboard"><i class="fas fa-home"></i> <span>Home</span></a>
+                <a href="#" title="Analytics"><i class="fas fa-chart-line"></i> <span>Analytics</span></a> 
+                <a href="products.html" title="Products"><i class="fas fa-box-open"></i> <span>Products</span></a>
+                <a href="#" title="Laporan"><i class="fas fa-file-alt"></i> <span>Reports</span></a> 
+                <a href="#" title="Settings"><i class="fas fa-cog"></i> <span>Settings</span></a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn" title="Logout"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-title">
+                    <h2>Dashboard Overview</h2>
+                    <p>Selamat datang kembali, Admin!</p>
+                </div>
+                <div class="header-profile">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=00dbde&color=fff" alt="User Avatar">
+                </div>
+            </header>
+            
+            <div class="dashboard-wrapper">
+                <section class="card-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon purple-gradient">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <div class="stat-details">
+                            <span class="stat-label">Total Products</span>
+                            <h3 id="totalProducts">...</h3>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon blue-gradient">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="stat-details">
+                            <span class="stat-label">Total Sales</span>
+                            <h3 id="totalSales">...</h3>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon cyan-gradient">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-details">
+                            <span class="stat-label">Total Revenue</span>
+                            <h3 id="totalRevenue">...</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="visual-section">
+                    <div class="chart-container">
+                        <div class="container-header">
+                            <h4>Sales Statistics</h4>
+                            <a href="products.html" class="btn-text">View Details</a>
+                        </div>
+                        <div class="placeholder-content">
+                             <i class="fas fa-chart-area"></i>
+                             <p>Data grafik akan ditampilkan di sini</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
